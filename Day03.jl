@@ -6,7 +6,7 @@ function solve(banks, x)
             bank = bank[findfirst(==(nums[x-i]), bank)+1:end]
             push!(nums, maximum(bank[1:end-i]))
         end
-        ret += sum(parse(Int, join(nums)))
+        ret += parse(Int, join(nums))
     end
     return ret
 end
